@@ -1,6 +1,17 @@
-import React from 'react'
+import React,{useState} from 'react'
 
 function Register() {
+  const [name, setName] = useState('');
+  const [phoneNumber, setPhoneNumber] = useState('');
+  const [email, setEmail] = useState('');
+  const [dobMonth, setDobMonth] = useState('');
+  const [dobDay, setDobDay] = useState('');
+  const [dobYear, setDobYear] = useState('');
+
+   const handlesubmit =(e)=>{
+    e.preventDefault();
+
+   }
   return (
     <div>
       <button style={{ backgroundColor: 'transparent', border: 'none' }} type="button" data-bs-toggle="modal" data-bs-target="#exampleModal">
@@ -24,8 +35,12 @@ function Register() {
                 fontSize: "30px", fontWeight: "700", lineHeight: "40px", letterSpacing: "0em",
                 textAlign: "left"
               }}>Create an account</p>
-              <input type="text" class="form-control mt-4" placeholder="Name" />
-              <input type="text" class="form-control mt-4 mb-4" placeholder="Phone Number" />
+              <form onSubmit={handlesubmit}>
+
+              <input type="text" class="form-control mt-4" placeholder="Name" value={name}
+        onChange={(e) => setName(e.target.value)} />
+              <input type="text" class="form-control mt-4 mb-4" placeholder="Phone Number" value={phoneNumber}
+        onChange={(e) => setPhoneNumber(e.target.value)}/>
               <p style={{
                 width: "78px",
                 height: "24px", fontFamily: "Segoe UI",
@@ -64,7 +79,7 @@ function Register() {
                   height: "70px",
                   borderRadius: "6",
                   border: "1px solid #00000033"
-                }}>
+                }} value={dobMonth} onChange={(e) => setDobMonth(e.target.value)}>
                   <option value="">Month</option>
                   <option value="january">january</option>
                   <option value="Febraury">Febraury</option>
@@ -81,7 +96,7 @@ function Register() {
 
 
                 </select>
-                <select id="dobDay" style={{
+                <select id="dobDay" value={dobDay} onChange={(e) => setDobDay(e.target.value)} style={{
                   width: "159px",
                   height: "70px",
                   borderRadius: "6",
@@ -126,7 +141,7 @@ function Register() {
                   height: "70px",
                   borderRadius: "6",
                   border: "1px solid #00000033"
-                }} >
+                }} value={dobYear} onChange={(e) => setDobYear(e.target.value)} >
                   <option value="">Year</option>
                   {/* Add options for years here */}
                   <option value="2024">2024</option>
@@ -169,6 +184,8 @@ function Register() {
                 marginTop:'20px',
                 marginLeft:"40px"  
               }}>Next</button>
+              </form>
+              
             </div>
           </div>
         </div>
