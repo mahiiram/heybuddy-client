@@ -3,6 +3,7 @@ import Googleicon from '../components/Googleicon.js';
 import MyAppleSigninButton from '../components/Appleicon.js';
 import Navtoemail from '../components/Navtoemail.js';
 import { Link } from 'react-router-dom';
+import Register from './Register.js';
 
 
 function Homepage() {
@@ -15,7 +16,7 @@ function Homepage() {
                 <p>Join Twitter today</p>
                 <Googleicon/>
                 <MyAppleSigninButton />
-                <Navtoemail />
+                <Register />
                 <p>By singing up you agree to the <span style={{color:"#1DA1F2"}}>Terms of Service</span> and <span style={{color:"#1DA1F2"}}>Privacy Policy</span>, including <span style={{color:"#1DA1F2"}}>Cookie Use</span>.</p>
                 <p>Already have an account? <span style={{color:"#1DA1F2"}}><Link to={'/login'} style={{textDecoration:"none"}}>Log in</Link></span></p>
                 <div>
