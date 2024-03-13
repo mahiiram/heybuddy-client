@@ -142,11 +142,12 @@ a {
 
 /* Login Container */
 
-.Login-container {
+.Login-container{
   width: 1920px;
   height: 1080px;
-  padding: 60px 0px 544px 0px;
-  background-color: grey;
+padding: 60px, 0px, 544px, 0px;
+
+  background-color: #FFFFFF;
 }
 
 .card-container {
@@ -160,8 +161,10 @@ a {
 }
 
 .card-container>.image {
-  width: 50px;
-  height: 41px;
+
+width: 50px;
+height: 41px;
+margin-bottom: 10px;
 }
 
 .card-container>.Login {
@@ -174,10 +177,11 @@ a {
   letter-spacing: 0em;
   text-align: left;
   color: #000000;
+  margin-top: 25px;
 }
 
 .card-container>.emailInput {
-  margin-top: 10px;
+  margin-top: 25px;
   width: 450px;
   height: 70px;
   top: 222px;
@@ -190,7 +194,7 @@ a {
 }
 
 .card-container>.PasswordInput {
-  margin-top: 10px;
+  margin-top: 25px;
   width: 450px;
   height: 70px;
   top: 222px;
@@ -199,4 +203,16 @@ a {
   border: 1px solid lightgrey;
   padding: 5px;
   text-align: start;
+}
+
+.card-container>.Button {
+  margin-top: 25px;
+  width: 450px;
+  height: 60px;
+  border-radius: 76px;
+  background: #1DA1F2;
+  border: none;
+  color: #FFFFFF;
+  font-family: Roboto;
+  letter-spacing: 0em;
 }

@@ -8,25 +8,23 @@ import Login from './pages/Login';
 const router = createBrowserRouter([
   {
     path:"/",
-    element:<div><Homepage /></div>
+    element:<Homepage />
   },
   {
     path:"/signup",
-    element:<div><Register/></div>
+    element:<Register/>
   },
   {
     path:"/login",
-    element:<div><Login/></div>
+    element:<Login/>
   }
 ]);
 
 function App() {
   return (
-    <main>
       <RouterProvider  router={router}>
 
       </RouterProvider>
-    </main>
    
   );
 }
